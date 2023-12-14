@@ -1,6 +1,4 @@
-# UrlShortener
- Dépôt pour la création d'une application web de type "Racourcisseur d'URL" avec PHP 8 et Symfony 5
+# Shorticom
+ Dépôt pour la création d'une application web qui permet de raccourcir les URL, le projet se base sur une possibilité de permettre aux marques de gagner de la place dans certains messages à gros caractères afin de permettre la mise en place lors d'évenement de liens ou autre.
 
-### YouTube
-
-[![Racourcisseur d'URL](https://i3.ytimg.com/vi/f7CamwgRAGI/maxresdefault.jpg)](https://www.youtube.com/watch?v=f7CamwgRAGI)
+Créé par Nelson Almeida et Clément Vandewalle dans le cadre du projet du développement Web intermédiaire de la semaine du 11 au 14 décembre
