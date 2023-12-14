@@ -17,7 +17,7 @@
         <header>
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Raccourcisseur d'URL</a>
+                    <a class="navbar-brand" href="{{ path('app_homepage') }}">Shorticom</a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -26,26 +26,24 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
 
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li class="nav-item">
+                            <li class="nav-item" style="display: inline-flex">
                                 <a class="nav-link active" aria-current="page" href="{{ path('app_homepage') }}">Accueil</a>
+                                <a class="nav-link active" aria-current="page" href="{{ path('app_bangala') }}">💊</a>
                             </li>
                             <li class="nav-item">
-                                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.urls.count > 0 %}
-                                    <a class="nav-link" href="{{ path('url_list') }}">Mes liens</a>
-                                {% endif %}
                             </li>
                         </ul>
 
                         <div class="d-flex">
                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                <a class="nav-link active" aria-current="page">Bienvenue {{ app.user.email }}</a>
+                                <a class="btn btn-outline-success me-2" href="{{ path('app_admin') }}">Mon Espace Personnel</a>
                                 <a class="btn btn-outline-danger me-2" href="{{ path('app_logout') }}">Déconnexion</a>
                             {% else %}
                                 <a class="btn btn-outline-success me-2" href="{{ path('app_login') }}">Connexion</a>
                                 <a class="btn btn-success" href="{{ path('app_register') }}">Inscription</a>
                             {% endif %}
-
                         </div>
-
                     </div>
                 </div>
             </nav>
